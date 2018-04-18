@@ -14,6 +14,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:http/http.dart' as web;
 import 'dart:convert';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -29,7 +30,7 @@ class _Plebeian extends State<Plebeian> {
 
     String appName = "Plebeian";
     String appVersion = "0.1";
-    var http = createHttpClient();
+    var http = new web.Client();
     String BASE_URL = "https://www.reddit.com";
     String COMMENTS_BASE_URL = "https://www.reddit.com/comments/";
 
